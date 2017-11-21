@@ -1,0 +1,199 @@
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
+<script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yum Cha Cost</title>
+<style>
+body {
+	margin:0 auto;
+	padding:10px;
+	box-sizing:border-box;
+}
+.card.mdl-card {
+    width: 100%;
+    min-height: 0px;
+    margin-bottom:5px;
+}
+.card > .mdl-card__title {
+    color: #171055;
+    background: #e4e1f9;
+}
+.card .mdl-button {
+    min-width:10px;
+    border:1px solid #333;
+}
+.mdl-card--expand {
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+}
+.card .mdl-button.selected,
+.card .mdl-button.selectedx {
+    background:#6053de;
+    color:#FFF;
+}
+form {
+    margin:0;
+}
+.mdl-textfield__input {
+  display:inline-block;
+    padding:0 4px;
+    width:60px;
+}
+.mdl-card__actions {
+  white-space: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+.save-costs {
+	margin-left:10px;
+}
+</style>
+
+</head>
+<body>
+<div class="card mdl-card mdl-shadow--2dp">
+  <div class="mdl-card__actions mdl-card--border">小 <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2" placeholder="4.30" value="4.30">
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cost-button selected">0</a>
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cost-button">1</a>
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cost-button">2</a>
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cost-button">3</a>
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cost-button">4</a>
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cost-button">5</a>
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cost-button">6</a>
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cost-button">7</a>
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cost-button">8</a>
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cost-button">9</a>
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cost-button">10</a>
+  </div>
+</div>
+<div class="card mdl-card mdl-shadow--2dp">
+  <div class="mdl-card__actions mdl-card--border">中 <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2" placeholder="6.30" value="6.30">
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cost-button selected">0</a>
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cost-button">1</a>
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cost-button">2</a>
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cost-button">3</a>
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cost-button">4</a>
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cost-button">5</a>
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cost-button">6</a>
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cost-button">7</a>
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cost-button">8</a>
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cost-button">9</a>
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cost-button">10</a>
+  </div>
+</div>
+<div class="card mdl-card mdl-shadow--2dp">
+  <div class="mdl-card__actions mdl-card--border">大 <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2" placeholder="7.50" value="7.50">
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cost-button selected">0</a>
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cost-button">1</a>
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cost-button">2</a>
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cost-button">3</a>
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cost-button">4</a>
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cost-button">5</a>
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cost-button">6</a>
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cost-button">7</a>
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cost-button">8</a>
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cost-button">9</a>
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cost-button">10</a>
+  </div>
+</div>
+<div class="card mdl-card mdl-shadow--2dp">
+  <div class="mdl-card__actions mdl-card--border">特 <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2" placeholder="8.20" value="8.20">
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cost-button selected">0</a>
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cost-button">1</a>
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cost-button">2</a>
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cost-button">3</a>
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cost-button">4</a>
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cost-button">5</a>
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cost-button">6</a>
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cost-button">7</a>
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cost-button">8</a>
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cost-button">9</a>
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cost-button">10</a>
+  </div>
+</div>
+<div class="card mdl-card mdl-shadow--2dp">
+  <div class="mdl-card__actions mdl-card--border">超 <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2" placeholder="8.80" value="8.80">
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cost-button selected">0</a>
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cost-button">1</a>
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cost-button">2</a>
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cost-button">3</a>
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cost-button">4</a>
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cost-button">5</a>
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cost-button">6</a>
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cost-button">7</a>
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cost-button">8</a>
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cost-button">9</a>
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cost-button">10</a>
+  </div>
+</div>
+<div class="card mdl-card mdl-shadow--2dp">
+  <div class="mdl-card__actions mdl-card--border">茶 
+  <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2" placeholder="2.80" value="2.80">
+  <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect tea-button">1</a>
+  <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect tea-button selectedx">2.80</a>
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cost-button" style="margin-left:20px">2</a>
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cost-button">3</a>
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cost-button selected">4</a>
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cost-button">5</a>
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cost-button">6</a>
+  </div>
+</div>
+<div class="card mdl-card mdl-shadow--2dp">
+  <div class="mdl-card__title">
+    <h3>Total: $<span class="total">0.00</span></h3>
+    <a class="mdl-button save-costs">Save</a>
+  </div>
+</div>
+<script>
+function refreshCosts() {
+    var cost = 0;
+    $("a.selected").each(function() {
+        var x = $(this).parent().find(".mdl-textfield__input").attr("value");
+        cost = cost + parseFloat($(this).text())*parseFloat($(this).parent().find(".mdl-textfield__input").attr("value"));
+    });
+    $(".total").html(cost.toFixed(2));
+}
+$(".cost-button").click(function() {
+    var links = $(this).parent().find("a");
+    links.removeClass("selected");
+    $(this).addClass("selected");
+    refreshCosts();
+});
+$(".tea-button").click(function() {
+	$(this).parent().find(".mdl-textfield__input").attr("value", $(this).text());
+    var links = $(this).parent().find("a");
+    links.removeClass("selectedx");
+    $(this).addClass("selectedx");
+    refreshCosts();
+});
+$(".mdl-textfield__input").on('input', function() {
+    $(this).attr("value",$(this).val());
+    refreshCosts();
+});
+$(function() {
+    refreshCosts();
+});
+$('.save-costs').click(function() {
+	$.ajax({
+        url: 'https://maker.ifttt.com/trigger/yum_save_log/with/k'+''+'e'+'y/Br'+'HJWCTnnH'+'XivbBkmHjKl',
+        method: 'POST',
+        crossDomain: true,
+        xhrFields: {
+           withCredentials: true
+        },
+        data: {
+            value1: $('.total').text(),
+            value2: '',
+            value3: ''
+        },
+        dataType: 'json'
+     }).done(function(d) {
+     	console.log("done");
+     });
+});
+</script>
+</body>
