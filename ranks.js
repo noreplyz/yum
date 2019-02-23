@@ -44,6 +44,7 @@ msrankings.processRanking = function(num) {
 
 msrankings.getAllRankings = function() {
     var rankPromises = [];
+    $('#ranks').append('Loading');
 
     for (var i = 1; i < 50; i = i + 5) {
         rankPromises.push(msrankings.processRanking(i));
@@ -53,16 +54,17 @@ msrankings.getAllRankings = function() {
     }).fail(function() {
         msrankings.getAllRankings();
     });
-}
+};
 
 msrankings.showRankings = function() {
+    $('#ranks').empty();
     $.each(msrankings.ranks, function(i, v) {
         $('#ranks').append('<div class="ranks-box"><div class="ranks-rank">' + i + '</div>' + 
             '<div class="ranks-user">' + v.user + '</div>' + 
             '<div class="ranks-level">' + v.level + '</div>' + 
             '<div class="ranks-exp">' + v.exp + '</div></div>');
     });
-}
+};
 
 $(function() {
     $('body').on('click', '#getranks', function() {
