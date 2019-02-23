@@ -5,21 +5,21 @@ msrankings.ranks = {};
 
 msrankings.getRanking = function(num) {
     return $.ajax({
-        url: 'http://www.whateverorigin.org/get?url=' + encodeURIComponent('http://maplestory.nexon.net/rankings/world-ranking/kradia?pageIndex=' + num) + '&callback=?',
-        dataType: 'json'
+        url: 'https://cors-anywhere.herokuapp.com/http://maplestory.nexon.net/rankings/world-ranking/kradia?pageIndex=' + num,
+        crossDomain: true
     }).done(function(data){
-        return data.contents;
+        return data;
     }).fail(function() {
         setTimeout(function() {
             console.log("Failed" + num);
             msrankings.getRanking(num);
-        }, 1000);
+        }, 5000);
     });
-}
+};
 
 msrankings.processRanking = function(num) {
     return msrankings.getRanking(num).then(function(d) {
-        var contents = $(d.contents);
+        var contents = $(d);
         contents = $($(contents.find('.ranking-container')).find('tr'));
         $.each(contents, function(i,v) { 
             if (i == 0) {
@@ -40,7 +40,7 @@ msrankings.processRanking = function(num) {
             };
         });
     });
-}
+};
 
 msrankings.getAllRankings = function() {
     var rankPromises = [];

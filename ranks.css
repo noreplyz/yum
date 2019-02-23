@@ -14,3 +14,10 @@ body * {
 	display:grid;
 	grid-template-columns:30px 1fr 1fr 1fr 3fr;
 }
+.ranks-rank,
+.ranks-user,
+.ranks-level {
+	-moz-user-select: none;
+    -ms-user-select: none;
+	user-select: none;
+}
