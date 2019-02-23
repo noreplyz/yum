@@ -12,11 +12,9 @@ body * {
 .ranks-box {
 	border-bottom:1px solid #CCC;
 	display:grid;
-	grid-template-columns:30px 1fr 1fr 1fr 3fr;
+	grid-template-columns:30px 1fr 1fr 1fr 2fr;
 }
-.ranks-rank,
-.ranks-user,
-.ranks-level {
+table .unselect {
 	-moz-user-select: none;
     -ms-user-select: none;
 	user-select: none;
