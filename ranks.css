@@ -14,8 +14,3 @@ body * {
 	display:grid;
 	grid-template-columns:30px 1fr 1fr 1fr 2fr;
 }
-table .unselect {
-	-moz-user-select: none;
-    -ms-user-select: none;
-	user-select: none;
-}
