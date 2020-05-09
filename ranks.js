@@ -62,7 +62,7 @@ msrankings.levels = {'220': 84838062013,
 
 msrankings.getRanking = function(num) {
     return $.ajax({
-        url: 'https://cors-anywhere.herokuapp.com/http://maplestory.nexon.net/rankings/world-ranking/kradia?pageIndex=' + num,
+        url: 'https://cors-anywhere.herokuapp.com/http://maplestory.nexon.net/rankings/world-ranking/aurora?pageIndex=' + num,
         crossDomain: true
     }).done(function(data){
         return data;
